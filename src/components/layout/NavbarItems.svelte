@@ -33,7 +33,7 @@
 {/each}
 
 <li class={itemClass}>
-    <a href="https://github.com/kurtnettle" target="_blank" aria-label="Visit Github Repository">
+    <a href="https://github.com/kurtnettle/bubt-routine-hive/" target="_blank" aria-label="Visit Github Repository">
         <svg
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
