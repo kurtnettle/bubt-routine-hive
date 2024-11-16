@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        %sveltekit.head%
+        <script>
+            (function () {
+                const darkMode = localStorage.getItem('darkMode') === 'true';
+                if (darkMode) {
+                    document.documentElement.classList.add('dark');
+                }
+            })();
+        </script>
+    </head>
+
+    <body data-sveltekit-preload-data="hover" class="bg-zinc-50 dark:bg-zinc-950">
+        <div style="display: contents">%sveltekit.body%</div>
+    </body>
+</html>
