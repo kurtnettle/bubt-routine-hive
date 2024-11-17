@@ -183,17 +183,20 @@ export function buildPnoDnoArray(data: any) {
     return matrix;
 }
 
-export function getNearestPeriod(periods: boolean[], pIdx: any) {
-    let left = pIdx;
-    let right = pIdx;
+export function getNearestPeriod(periods: boolean[], pIdx: number) {
+    let nearest = -1;
+    let minDistance = Infinity;
 
-    while (left >= 0 || right < periods.length) {
-        if (left >= 0 && periods[left]) return left;
-        if (right < periods.length && periods[right]) return right;
+    for (let i = 0; i < periods.length; i++) {
+        if (periods[i]) {
+            const distance = Math.abs(i - pIdx);
 
-        left--;
-        right++;
+            if (distance < minDistance) {
+                minDistance = distance;
+                nearest = i;
+            }
+        }
     }
 
-    return -1;
+    return nearest;
 }
