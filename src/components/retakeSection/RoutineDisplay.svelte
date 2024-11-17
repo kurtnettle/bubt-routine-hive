@@ -8,7 +8,7 @@
         try {
             const gap = getNearestPeriod(matrix[dayNo], pIdx);
             if (gap === pIdx) return 0;
-            else if (gap) return gap;
+            else if (gap) return Math.abs(gap - pIdx);
         } catch (error) {
             console.debug(matrix);
             console.error(`failed to get nearest period:`, error);
