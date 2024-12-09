@@ -11,23 +11,28 @@
     </div>
 </div>
 
-<!-- credit: #16 https://css-loaders.com/progress/ -->
+<!-- credit for base CSS: #16 https://css-loaders.com/progress/ -->
 <style>
-    .loader {
-        height: 4px;
-        --c: no-repeat linear-gradient(rgb(37, 99, 235) 0 0);
-        background: var(--c), var(--c), rgb(219 234 254);
-        background-size: 60% 100%;
-        animation: l16 3s infinite;
+    :global(:root) {
+        --loader-color: rgb(37, 99, 235);
+        --loader-bg: rgb(219 234 254);
     }
 
-    @media (prefers-color-scheme: dark) {
+    :global(:root.dark) {
         .loader {
             --c: no-repeat linear-gradient(rgb(29, 78, 216) 0 0);
             background: var(--c), var(--c), #1e293b;
             background-size: 60% 100%;
             animation: l16 3s infinite;
         }
+    }
+
+    .loader {
+        height: 4px;
+        --c: no-repeat linear-gradient(rgb(37, 99, 235) 0 0);
+        background: var(--c), var(--c), rgb(219 234 254);
+        background-size: 60% 100%;
+        animation: l16 3s infinite;
     }
 
     @keyframes l16 {
