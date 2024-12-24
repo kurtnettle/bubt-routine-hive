@@ -61,7 +61,7 @@
     </button>
 
     <div
-        class="absolute z-10 mt-2 w-full origin-top-right transform overflow-hidden rounded-md text-center shadow-lg ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out"
+        class="absolute z-10 mt-2 w-full origin-top-right transform rounded-md text-center shadow-lg ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out"
         role="menu"
         aria-orientation="vertical"
         aria-labelledby="menu-button"
@@ -70,6 +70,8 @@
         class:opacity-0={!isOpen}
         class:max-h-64={isOpen}
         class:max-h-0={!isOpen}
+        class:overflow-y-auto={isOpen}
+        class:overflow-hidden={!isOpen}
     >
         <ul class="py-1" role="none">
             <slot></slot>
