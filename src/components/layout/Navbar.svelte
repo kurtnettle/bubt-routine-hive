@@ -8,6 +8,12 @@
     }
 </script>
 
+<p
+class="rounded w-full bg-orange-400 py-1.5 text-center text-sm font-medium text-black dark:bg-orange-700 dark:text-white"
+>
+Website Under Maintenance, Sorry for the inconvinience.
+</p>
+
 <nav
     id="navbar"
     class="mx-auto flex max-w-5xl flex-wrap items-center border border-x-0 border-gray-200 bg-gray-50 text-gray-800 shadow-md sm:border-x sm:py-2 md:my-6 md:rounded-lg lg:my-8 dark:border-gray-700 dark:bg-zinc-900 dark:text-gray-50"
