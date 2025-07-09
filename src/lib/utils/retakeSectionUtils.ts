@@ -29,9 +29,8 @@ export function parseCellContent(elem: HTMLElement): periodInfo | undefined {
         periodTime: '',
         code: strongs[0].text.trim(),
         faculty: strongs[1].nextSibling?.text.trim() || '-1',
-        building:
-            parseInt(strongs[2].nextSibling?.rawText.replace('&rArr;', '').trim() || '0', 10) || -1,
-        room: parseInt(strongs[3].nextSibling?.text.trim() || '0', 10) || -1
+        building: parseInt(strongs[2].nextSibling?.text.trim()[0] || '0', 10) || -1,
+        room: parseInt(strongs[2].nextSibling?.text.trim().slice(1) || '0', 10) || -1
     };
 }
 
